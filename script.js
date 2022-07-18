@@ -7,10 +7,8 @@ function sumInput(){
     }
     numbers.sort((a,b)=>a-b);
     console.log(numbers);
-    let sum = 0;
-    for (let number of numbers){
-        sum += number;
-    }
+
+    let sum = numbers.reduce((previousNumber, currentNumber) => previousNumber + currentNumber);
     return sum;
 }
 console.log(`Сумма введенных значений: ${sumInput()}`);
